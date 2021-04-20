@@ -6,6 +6,7 @@ Use Throwable;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\App;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Client\Response;
 
 class Handler extends ExceptionHandler
 {
@@ -53,6 +54,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        /** @var Response */
         $response = parent::render($request, $exception);
 
         if (

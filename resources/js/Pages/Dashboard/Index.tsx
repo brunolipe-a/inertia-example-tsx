@@ -1,20 +1,23 @@
-import React from 'react';
 import { InertiaLink } from '@inertiajs/inertia-react';
 import Layout from '@/Shared/Layout';
 
 const Dashboard = () => {
+  function handle() {
+    throw new Error('opa');
+  }
+
   return (
     <div>
       <h1 className="mb-8 text-3xl font-bold">Dashboard</h1>
       <p className="mb-12 leading-normal">
         Hey there! Welcome to Ping CRM, a demo app designed to help illustrate
         how
-        <a
+        <button
           className="mx-1 text-indigo-600 underline hover:text-orange-500"
-          href="https://inertiajs.com"
+          onClick={handle}
         >
           Inertia.js
-        </a>
+        </button>
         works with
         <a
           className="ml-1 text-indigo-600 underline hover:text-orange-500"
@@ -38,6 +41,6 @@ const Dashboard = () => {
 
 // Persistent layout
 // Docs: https://inertiajs.com/pages#persistent-layouts
-Dashboard.layout = page => <Layout title="Dashboard" children={page} />;
+Dashboard.layout = (page: any) => <Layout title="Dashboard" children={page} />;
 
 export default Dashboard;

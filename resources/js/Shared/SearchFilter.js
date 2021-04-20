@@ -31,6 +31,8 @@ export default () => {
       const query = Object.keys(pickBy(values)).length
         ? pickBy(values)
         : { remember: 'forget' };
+
+      console.log(query);
       Inertia.get(route(route().current()), query, {
         replace: true,
         preserveState: true

@@ -1,4 +1,3 @@
-import React from 'react';
 import Helmet from 'react-helmet';
 import MainMenu from '@/Shared/MainMenu';
 import FlashMessages from '@/Shared/FlashMessages';

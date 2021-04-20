@@ -9,7 +9,6 @@ use App\Http\Resources\ContactResource;
 use App\Http\Resources\UserOrganizationCollection;
 use App\Models\Contact;
 use Inertia\Inertia;
-use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Redirect;
